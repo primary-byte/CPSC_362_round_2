@@ -11,10 +11,10 @@ import { UpdateComponent } from './update.component';
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        ProfileRoutingModule
+        ProfileRoutingModule,
     ],
     declarations: [
-        //LayoutComponent,
+        LayoutComponent,
         DetailsComponent,
         UpdateComponent
     ]
