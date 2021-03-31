@@ -1,0 +1,16 @@
+.navbar {
+    justify-content: center;
+}
+
+.navbar-nav{
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar-nav.L{
+    justify-content: flex-start;
+}
+
+.navbar-nav.R {
+    justify-content: flex-end;
+}

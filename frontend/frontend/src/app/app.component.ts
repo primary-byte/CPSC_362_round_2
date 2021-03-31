@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { AccountService } from './_services/account.service';
 import { Role } from './_models/role';
 
-@Component({ selector: 'app', templateUrl: 'app.component.html' })
+@Component({ selector: 'app', templateUrl: 'app.component.html', styleUrls: ['./app.component.css'] })
 export class AppComponent {
     Role = Role;
     account: Account;

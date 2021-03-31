@@ -8,7 +8,7 @@ a { cursor: pointer; }
 .admin-nav {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #e8e9ea;
+    background-color: #7a7f83;
     border-bottom: 1px solid #ccc;
 }
 
@@ -16,4 +16,8 @@ a { cursor: pointer; }
     width: 40px;
     text-align: center;
     box-sizing: content-box;
+}
+
+html {
+    height: 100%;
 }

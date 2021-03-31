@@ -1,3 +1,7 @@
+<head>
+    <title>TheDocs | Admin Edit Accounts</title>
+</head>
+
 <h1 *ngIf="isAddMode">Create Account</h1>
 <h1 *ngIf="!isAddMode">Edit Account</h1>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
