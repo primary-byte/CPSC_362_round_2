@@ -6,12 +6,19 @@
     padding: 10px;
 }
 .schedule {
-    margin: 0 10px;
+    width: 70%;
+    margin: 10px 10px;
     flex-grow: 3;
 }
 .profile {
-    margin: 0 10px;
+    width: 30%;
+    margin: 10px 10px;
     flex-grow: 1;
+}
+.circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
 }
 footer {
     display: block;

@@ -2,6 +2,9 @@
     <title>TheDocs | Edit Profile</title>
 </head>
 
+<div class="circle">
+<img src="shrek-and-donkey-clipart-2.jpg" alt="Portrait of Donkey from Shrek">
+</div>
 <h1>Update Profile</h1>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="form-row">
@@ -18,14 +21,14 @@
                 <div *ngIf="f.title.errors.required">Title is required</div>
             </div>
         </div>
-        <div class="form-group col-5">
+        <div class="form-group col-4">
             <label>First Name</label>
             <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
             <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
                 <div *ngIf="f.firstName.errors.required">First Name is required</div>
             </div>
         </div>
-        <div class="form-group col-5">
+        <div class="form-group col-4">
             <label>Last Name</label>
             <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
             <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
