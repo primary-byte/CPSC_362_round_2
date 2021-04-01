@@ -1,30 +1,42 @@
 <div class="app-container" [ngClass]="{ 'bg-light': account }">
-  <!-- main nav -->
-  <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="account">
-    <div class="navbar-nav L">
-          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item nav-link">Home</a>
-    </div>
-    <div class="navbar-nav">
-          <a *ngIf="account.role === Role.Admin" routerLink="/admin" routerLinkActive="active" class="nav-item nav-link">Admin</a>
-          <a routerLink="/classes" routerLinkActive="active" class="nav-item nav-link">Classes</a>
-          <a routerLink="/questions" routerLinkActive="active" class="nav-item nav-link">Questions</a>
-          <a routerLink="/studygroups" routerLinkActive="active" class="nav-item nav-link">Study Groups</a>
-          <a routerLink="/teacherreview" routerLinkActive="active" class="nav-item nav-link">Teacher Reviews</a>
-          <a routerLink="/thots" routerLinkActive="active" class="nav-item nav-link">Thoughts</a>
+      <!-- main nav -->
+      <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="account">
+            <div class="navbar-nav L">
+                  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                        class="nav-item nav-link">Home</a>
+            </div>
+            <div class="navbar-nav">
+                  <a *ngIf="account.role === Role.Admin" routerLink="/admin" routerLinkActive="active"
+                        class="nav-item nav-link">Admin</a>
+                  <a routerLink="/classes" routerLinkActive="active" class="nav-item nav-link">Classes</a>
+                  <a routerLink="/questions" routerLinkActive="active" class="nav-item nav-link">Questions</a>
+                  <a routerLink="/studygroups" routerLinkActive="active" class="nav-item nav-link">Study Groups</a>
+                  <a routerLink="/teacherreview" routerLinkActive="active" class="nav-item nav-link">Teacher Reviews</a>
+                  <a routerLink="/thots" routerLinkActive="active" class="nav-item nav-link">Thoughts</a>
 
-    </div>
-    <div class="navbar-nav R">
-          <a routerLink="/profile" routerLinkActive="active" class="nav-item nav-link">Profile</a>
-          <a (click)="logout()" class="nav-item nav-link">Logout</a>
-    </div>
-  </nav>
+            </div>
+            <div class="navbar-nav R">
+                  <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+                        <mat-icon>reorder</mat-icon>
+                  </button>
+                  <mat-menu #beforeMenu="matMenu" xPosition="before">
+                        <button mat-menu-item>
+                              <a routerLink="/profile" routerLinkActive="active" class="nav-item nav-link">Profile</a>
+                        </button>
+                        <button mat-menu-item>
+                              <a (click)="logout()" class="nav-item nav-link">Logout</a>
+                        </button>
+                  </mat-menu>
 
-  <!-- subnav router outlet -->
-  <router-outlet name="subnav"></router-outlet>
+            </div>
+      </nav>
 
-  <!-- global alert -->
-  <alert></alert>
+      <!-- subnav router outlet -->
+      <router-outlet name="subnav"></router-outlet>
 
-  <!-- main router outlet -->
-  <router-outlet></router-outlet>
+      <!-- global alert -->
+      <alert></alert>
+
+      <!-- main router outlet -->
+      <router-outlet></router-outlet>
 </div>
