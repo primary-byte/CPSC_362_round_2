@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { LayoutComponent } from './layout.component';
@@ -12,6 +13,7 @@ import { UpdateComponent } from './update.component';
         CommonModule,
         ReactiveFormsModule,
         ProfileRoutingModule,
+        MatCardModule
     ],
     declarations: [
         LayoutComponent,

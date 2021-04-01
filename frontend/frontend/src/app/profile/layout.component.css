@@ -1,18 +1,18 @@
 .flex {
     display: flex;
-    align-content: center;
+    align-items: stretch;
+    justify-content: space-between;
     min-height: 500px;
     padding: 10px;
 }
-
-.flex.p-4.schedule {
-    justify-content: flex-start;
+.schedule {
+    margin: 0 10px;
+    flex-grow: 3;
 }
-
-.p-4 {
-    justify-content: flex-end;
+.profile {
+    margin: 0 10px;
+    flex-grow: 1;
 }
-
 footer {
     display: block;
     min-height: 100px;

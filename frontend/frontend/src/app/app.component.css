@@ -3,7 +3,6 @@
 }
 
 .navbar-nav{
-    width: 100%;
     justify-content: center;
 }
 
@@ -14,4 +13,3 @@
 .navbar-nav.R {
     justify-content: flex-end;
 }
-
