@@ -5,13 +5,16 @@
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item nav-link">Home</a>
     </div>
     <div class="navbar-nav">
-          <a routerLink="/classes" routerLinkActive="active" class="nav-item nav-link">Classes</a>
-          <a routerLink="/profile" routerLinkActive="active" class="nav-item nav-link">Profile</a>
-          <a routerLink="/questions" routerLinkActive="active" class="nav-item nav-link">Questions</a>
-          <a routerLink="/thots" routerLinkActive="active" class="nav-item nav-link">Thoughts</a>
           <a *ngIf="account.role === Role.Admin" routerLink="/admin" routerLinkActive="active" class="nav-item nav-link">Admin</a>
+          <a routerLink="/classes" routerLinkActive="active" class="nav-item nav-link">Classes</a>
+          <a routerLink="/questions" routerLinkActive="active" class="nav-item nav-link">Questions</a>
+          <a routerLink="/studygroups" routerLinkActive="active" class="nav-item nav-link">Study Groups</a>
+          <a routerLink="/teacherreview" routerLinkActive="active" class="nav-item nav-link">Teacher Reviews</a>
+          <a routerLink="/thots" routerLinkActive="active" class="nav-item nav-link">Thoughts</a>
+
     </div>
     <div class="navbar-nav R">
+          <a routerLink="/profile" routerLinkActive="active" class="nav-item nav-link">Profile</a>
           <a (click)="logout()" class="nav-item nav-link">Logout</a>
     </div>
   </nav>
