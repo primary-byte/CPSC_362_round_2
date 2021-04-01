@@ -15,6 +15,7 @@ import { AccountService } from './_services/account.service';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components/alert.component';
 import { HomeComponent } from './home/home.component';
+import { ShowPostComponent } from './show-post/show-post.component';
 
 @NgModule({
     imports: [
@@ -26,7 +27,8 @@ import { HomeComponent } from './home/home.component';
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent
+        HomeComponent,
+        ShowPostComponent
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
