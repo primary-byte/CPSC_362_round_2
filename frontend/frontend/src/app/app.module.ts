@@ -2,6 +2,8 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/fake-backend';
@@ -15,14 +17,21 @@ import { AccountService } from './_services/account.service';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components/alert.component';
 import { HomeComponent } from './home/home.component';
+<<<<<<< HEAD
 import { ShowPostComponent } from './show-post/show-post.component';
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+>>>>>>> 052948da205697410bf58caa1b4ac181836387b8
 
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        MatMenuModule,
+        MatIconModule,
+        BrowserAnimationsModule
     ],
     declarations: [
         AppComponent,
