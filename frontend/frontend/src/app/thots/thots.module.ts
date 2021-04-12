@@ -1,3 +1,4 @@
+import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,7 +8,8 @@ import { LayoutComponent } from './layout.component';
 @NgModule({
   imports: [
     CommonModule,
-    ThotsRoutingModule
+    ThotsRoutingModule,
+    MatCardModule
   ],
   declarations: [
     LayoutComponent
