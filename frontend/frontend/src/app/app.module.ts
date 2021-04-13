@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { AddPostComponent } from './add-post/add-post.component';
+import { CommonService } from './service/common.service';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/fake-backend';
@@ -34,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         AppComponent,
         AlertComponent,
         HomeComponent,
-        ShowPostComponent
+        ShowPostComponent,
+        AddPostComponent
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
@@ -42,7 +45,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // provider used to create fake backend
-        //fakeBackendProvider
+        fakeBackendProvider
     ],
     bootstrap: [AppComponent]
 })
