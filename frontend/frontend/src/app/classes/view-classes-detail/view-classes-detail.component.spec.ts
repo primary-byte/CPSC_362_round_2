@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewClassDetailComponent } from './view-class-detail.component';
+import { ViewClassesDetailComponent } from './view-classes-detail.component';
 
-describe('ViewClassDetailComponent', () => {
-  let component: ViewClassDetailComponent;
-  let fixture: ComponentFixture<ViewClassDetailComponent>;
+describe('ViewClassesDetailComponent', () => {
+  let component: ViewClassesDetailComponent;
+  let fixture: ComponentFixture<ViewClassesDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewClassDetailComponent ]
+      declarations: [ ViewClassesDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewClassDetailComponent);
+    fixture = TestBed.createComponent(ViewClassesDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

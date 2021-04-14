@@ -1,10 +1,10 @@
-.classList {
+.teachers {
     margin: 0 0 2em 0;
-    List-style-type: none;
+    list-style-type: none;
     padding: 0;
     width: 50em;
   }
-  .classList li {
+  .teachers li {
     cursor: pointer;
     position: relative;
     left: 0;
@@ -14,24 +14,24 @@
     height: 2.5em;
     border-radius: 4px;
   }
-  .classList li:hover {
+  .teachers li:hover {
     color: #2c3a41;
     background-color: #e6e6e6;
     left: .1em;
   }
-  .classList li.selected {
+  .teachers li.selected {
     background-color: black;
     color: white;
   }
-  .classList li.selected:hover {
+  .teachers li.selected:hover {
     background-color: #505050;
     color: white;
   }
-  .classList li.selected:active {
+  .teachers li.selected:active {
     background-color: black;
     color: white;
   }
-  .classList .badge {
+  .teachers .badge {
     display: inline-block;
     font-size: small;
     color: white;

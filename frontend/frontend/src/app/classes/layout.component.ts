@@ -1,14 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { slideInAnimation } from './animations';
+import {Component} from '@angular/core';
 
 @Component({
     templateUrl: 'layout.component.html',
-    styleUrls: ['./layout.component.css'],
-    animations: [ slideInAnimation ]
+    styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent { 
-    getAnimationData(outlet: RouterOutlet) {
-        return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
-    }
-}
+
+export class LayoutComponent { }

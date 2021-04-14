@@ -14,18 +14,17 @@ main {
     justify-content: center;
     align-items: flex-end;
     width: 60%;
+
 }
 mat-card {
     margin: 10px;
 }
 aside {
     display: flex;
+    flex-direction: column;
     width: 30%;
 }
 .search {
     width: 90%;
     min-height: 500px;
-}
-.tags {
-    width: 80%;
 }

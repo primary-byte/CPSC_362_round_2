@@ -1,7 +1,6 @@
 import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { QuestionsRoutingModule } from './questions-routing.module';
 import { LayoutComponent } from './layout.component';
 
@@ -9,7 +8,7 @@ import { LayoutComponent } from './layout.component';
   imports: [
     CommonModule,
     QuestionsRoutingModule,
-    MatCardModule
+    MatCardModule,
   ],
   declarations: [
     LayoutComponent

@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 
 import { TeacherReviewRoutingModule } from './teacherreview-routing.module';
 import { LayoutComponent } from './layout.component';
+import { ViewTeachersComponent } from './view-teachers/view-teachers.component';
+import { TeacherDetailComponent } from './teacher-detail/teacher-detail.component';
 
 @NgModule({
   imports: [
@@ -12,7 +14,9 @@ import { LayoutComponent } from './layout.component';
     MatCardModule
   ],
   declarations: [
-    LayoutComponent
+    LayoutComponent,
+    ViewTeachersComponent,
+    TeacherDetailComponent
   ]
 })
 export class TeacherReviewModule { }

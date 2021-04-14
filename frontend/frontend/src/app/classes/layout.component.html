@@ -4,12 +4,8 @@
 <div class="wrapper">
 <main>
     <mat-card class="search">
-        <a routerLink="/courses" routerLinkActive="active">courses</a>
-        <div [@routeAnimation]="getAnimationData(routerOutlet)">
-            <router-outlet #routerOutlet="outlet"></router-outlet>
-        </div>
+        <app-view-classes></app-view-classes>
     </mat-card>
-
 </main>
 <aside>
     <mat-card class="tags">
