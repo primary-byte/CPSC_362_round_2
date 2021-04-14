@@ -1,0 +1,10 @@
+<h2>Class List</h2>
+
+<ul class="classList">
+    <li *ngFor="let classes of classList$ | async"
+        [class.selected]="classes.id === selectedId">
+        <a [routerLink]="['/classes',classes.id]">
+            <span class="badge"> {{ classes.id }} </span> {{ classes.name }}
+        </a>
+    </li>
+</ul>

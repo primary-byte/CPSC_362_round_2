@@ -19,6 +19,8 @@ import { AlertComponent } from './_components/alert.component';
 import { HomeComponent } from './home/home.component';
 import { ShowPostComponent } from './show-post/show-post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewTeachersComponent } from './teacherlist/view-teachers/view-teachers.component';
+import { TeacherDetailComponent } from './teacherlist/teacher-detail/teacher-detail.component';
 
 @NgModule({
     imports: [
@@ -34,7 +36,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         AppComponent,
         AlertComponent,
         HomeComponent,
-        ShowPostComponent
+        ShowPostComponent,
+        ViewTeachersComponent,
+        TeacherDetailComponent
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
