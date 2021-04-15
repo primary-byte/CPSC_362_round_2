@@ -16,27 +16,26 @@ main {
     width: 60%;
 
 }
-mat-card {
+mat-card, button {
     margin: 10px;
 }
 aside {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 30%;
 }
 .searchbar {
     width: 90%;
 }
-.askqbutton {
-    width: 80%;
-}
 .search {
     width: 90%;
     min-height: 500px;
 }
-
-.question {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.topquestions {
+    min-height: 500px;
+}
+.askquestion {
+    height: 50px;
+    padding: 1rem;
 }

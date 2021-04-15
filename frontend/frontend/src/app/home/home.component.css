@@ -4,3 +4,7 @@ header, main, footer{
 p {
     font-size: 1.5em;
 }
+
+main {
+    min-height: 700px;
+}

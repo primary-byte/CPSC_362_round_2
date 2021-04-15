@@ -13,14 +13,13 @@
 
 </main>
 <aside>
-    <span> Top questions goes here </span>
-</aside>
-</div>
-<div class="question">
-    <mat-card class="question">
-        <p>change this into a popup message
-            <br>form for asking a question goes here</p>
+    <button mat-raised-button (click)="openDialog()" class="askquestion">
+        <p>Ask A Question</p>
+    </button>
+    <mat-card class="topquestions">
+        <p>Top questions goes here</p>
     </mat-card>
+</aside>
 </div>
 <footer>
     <p>This is where the copyright goes</p>

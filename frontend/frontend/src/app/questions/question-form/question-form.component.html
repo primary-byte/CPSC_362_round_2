@@ -1,0 +1,22 @@
+
+<h1>Question Form</h1>
+
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+<div class="form-group">
+    <label for="question">Question</label>
+    <input type="text" class="form-control" id="question"
+            required
+            [(ngModel)]="questions.question" name="question">
+</div>
+
+<div class="form-group">
+    <label for="course">Course Number</label>
+    <select class="form-control" id="course" 
+            required
+            [(ngModel)]="questions.course" name ="course">
+      <option *ngFor="let class of courses" [value]="class">{{class}}</option>
+    </select>
+</div>
+
+<button type="submit" class="btn btn-success" (click)="addNewQuestion(newQuestion.course,newQuestion.question)">Submit Question</button>
+</form>
