@@ -16,7 +16,7 @@ export class LayoutComponent {
 
     openDialog(): void {
         const dialogRef = this.dialog.open(ModalComponent, {
-            width: '250px',
+            width: '500px',
             data: {name: this.name, animal: this.animal}
     });
 

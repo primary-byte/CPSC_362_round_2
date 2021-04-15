@@ -7,8 +7,6 @@ import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-  
-  food: string;
 
   constructor(
     public dialogRef: MatDialogRef<ModalComponent>,

@@ -1,7 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { QUESTIONS } from '../mock-questions';
-
 import { Question } from '../question';
+import { Course } from './../../classes/course';
+import { COURSES } from './../../classes/mock-courses';
 
 @Component({
   selector: 'app-question-form',
@@ -14,6 +15,7 @@ export class QuestionFormComponent {
   @Output() newQuestionEvent = new EventEmitter<string>();
 
   questions = QUESTIONS;
+  courses = COURSES;
 
   submitted = false;
 

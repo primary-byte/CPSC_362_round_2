@@ -13,8 +13,8 @@
     <label for="course">Course Number</label>
     <select class="form-control" id="course" 
             required
-            [(ngModel)]="questions.course" name ="course">
-      <option *ngFor="let class of courses" [value]="class">{{class}}</option>
+            [(ngModel)]="courses.id" name ="id">
+      <option *ngFor="let id of courses" [value]="id">{{id}}</option>
     </select>
 </div>
 
