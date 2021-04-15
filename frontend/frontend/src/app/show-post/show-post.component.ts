@@ -1,10 +1,6 @@
-public posts : any [];
-
 import { Component, OnInit } from '@angular/core';
 import { ShowPostService } from './show-post.service';
-import { CommonService } from '../service/common.service';
-
-
+ 
 @Component({
   selector: 'app-show-post',
   templateUrl: './show-post.component.html',
@@ -12,21 +8,21 @@ import { CommonService } from '../service/common.service';
   providers: [ ShowPostService ]
 })
 export class ShowPostComponent implements OnInit {
-
-  constructor(private showPostService: ShowPostService, private commonService: CommonService) {
+ 
+  public posts : any [];
+ 
+  constructor(private showPostService: ShowPostService) {
        
-}
+  }
  
   ngOnInit(){
     this.getAllPost();
-    this.commonService.postAdded_Observable.subscribe(res => {
-      this.getAllPost();
-    });
   }
  
   getAllPost(){
-    this.ShowPostService.getAllPost().subscribe(result => {
-      this.posts = result['data'];
+    this.showPostService.getAllPost().subscribe(result => {
+        this.posts = result['data'];
     });
   }
+ 
 }

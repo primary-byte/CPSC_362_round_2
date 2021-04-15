@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 import { AddPostService } from './add-post.service';  //???
 import { Post } from '../models/post.model';
 import { Component, ViewChild, ElementRef } from '@angular/core';
@@ -31,4 +31,4 @@ export class AddPostComponent {
 
     @ViewChild('closeBtn') closeBtn: ElementRef;
  
-}
+} */

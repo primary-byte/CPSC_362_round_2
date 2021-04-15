@@ -9,12 +9,12 @@ const errorHandler = require('_middleware/error-handler');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-
 // allow cors requests from any origin and with credentials
 app.use(cors({ origin: (origin, callback) => callback(null, true), credentials: true }));
 
 // api routes
 app.use('/accounts', require('./accounts/accounts.controller'));
+app.use('/posts', require('./posts/posts.controller'));
 
 // swagger docs route
 app.use('/api-docs', require('_helpers/swagger'));
@@ -22,8 +22,20 @@ app.use('/api-docs', require('_helpers/swagger'));
 // global error handler
 app.use(errorHandler);
 
+//gabe addition start
+
+module.exports = app;
+
+//gabe addition end
+
 // start server
+module.exports = router;
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
 app.listen(port, () => {
     console.log('Server listening on port ' + port);
 });
+
+
+
+
+

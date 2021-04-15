@@ -32,6 +32,8 @@ schema.set('toJSON', {
         delete ret._id;
         delete ret.passwordHash;
     }
-});
+}, { collection : 'user' });
+
+//const User = mongoose.model('User', schema);  //Gabe addition
 
 module.exports = mongoose.model('Account', schema);
