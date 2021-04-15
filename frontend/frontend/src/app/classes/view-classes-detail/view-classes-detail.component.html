@@ -8,3 +8,14 @@
     </div>
   
   </div>
+
+<div mat-dialog-content>
+
+  <h2>{{course.name | uppercase}} Details</h2>
+  <div><span>CPSC </span>{{course.id}}</div>
+  <div>
+    <label for="course-name">Course name: </label>
+    <input id="course-name" [(ngModel)]="course.name" placeholder="name">
+  </div>
+
+</div>

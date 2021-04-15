@@ -1,8 +1,8 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { QUESTIONS } from '../mock-questions';
 import { Question } from '../question';
+import { COURSES } from './../mock-course-list';
 import { Course } from './../../classes/course';
-import { COURSES } from './../../classes/mock-courses';
 
 @Component({
   selector: 'app-question-form',
@@ -11,18 +11,9 @@ import { COURSES } from './../../classes/mock-courses';
 })
 export class QuestionFormComponent {
 
-  @Output() newCourseEvent = new EventEmitter<number>();
-  @Output() newQuestionEvent = new EventEmitter<string>();
-
   questions = QUESTIONS;
   courses = COURSES;
 
-  submitted = false;
+  model = new Question(1,this.courses[0].id,'');
 
-  onSubmit() { this.submitted = true; }
-
-  addNewQuestion(course: number, question: string) {
-    this.newCourseEvent.emit(course);
-    this.newQuestionEvent.emit(question);
-  }
 }

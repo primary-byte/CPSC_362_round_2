@@ -5,7 +5,9 @@ export class Account {
     title?: string;
     firstName?: string;
     lastName?: string;
+    username?: string;
     email?: string;
     role?: Role;
     jwtToken?: string;
+    status?: string;
 }

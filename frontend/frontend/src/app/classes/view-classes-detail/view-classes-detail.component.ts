@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { ViewClassesComponent } from './../view-classes/view-classes.component';
+import { Component, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Course } from '../course';
 
 @Component({
@@ -6,13 +8,18 @@ import { Course } from '../course';
   templateUrl: './view-classes-detail.component.html',
   styleUrls: ['./view-classes-detail.component.css']
 })
-export class ViewClassesDetailComponent implements OnInit {
+export class ViewClassesDetailComponent {
 
-  @Input() course?: Course;
+  name: any;
+  
+  constructor(    
+    public dialogRef: MatDialogRef<ViewClassesDetailComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+    onNoClick(): void {
+      this.dialogRef.close({
+        name: this.name
+      });
+    }
 }
+
