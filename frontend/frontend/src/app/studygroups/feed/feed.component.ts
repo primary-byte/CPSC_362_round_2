@@ -1,6 +1,7 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
-import { ChatService } from '../services/chat.service';
 import { ChatMessage } from './../../_models/chat-message.model';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { ChatService } from '../services/chat.service';
+import { Observable } from 'rxjs/Observable';
 import { AngularFireList } from '@angular/fire/database';
 
 @Component({
@@ -9,7 +10,6 @@ import { AngularFireList } from '@angular/fire/database';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit, OnChanges {
-
   feed: AngularFireList<ChatMessage>;
 
   constructor(private chat: ChatService) { }
@@ -21,4 +21,5 @@ export class FeedComponent implements OnInit, OnChanges {
   ngOnChanges() {
     this.feed = this.chat.getMessages();
   }
+
 }

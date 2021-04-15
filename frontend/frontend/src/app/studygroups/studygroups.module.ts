@@ -1,3 +1,4 @@
+
 import { environment } from './../../environments/environment';
 
 import { FormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ import { UserItemComponent } from './user-item/user-item.component';
 import { FeedComponent } from './feed/feed.component';
 import { MessageComponent } from './message/message.component';
 
+import { AuthService } from './services/auth.service';
 import { ChatService } from './services/chat.service';
 
 
@@ -41,6 +43,6 @@ import { ChatService } from './services/chat.service';
     FeedComponent,
     MessageComponent
   ],
-  providers: [ChatService]
+  providers: [ChatService, AuthService],
 })
 export class StudyGroupsModule { }

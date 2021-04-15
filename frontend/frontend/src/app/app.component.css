@@ -13,3 +13,6 @@
 .navbar-nav.R {
     justify-content: flex-end;
 }
+button {
+    background-color: white;
+}

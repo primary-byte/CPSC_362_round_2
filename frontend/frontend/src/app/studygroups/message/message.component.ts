@@ -1,7 +1,7 @@
 import { ChatMessage } from './../../_models/chat-message.model';
-import { AuthService } from './../services/auth.service';
-import { ChatService } from './../services/chat.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ChatService } from '../services/chat.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-message',
@@ -15,14 +15,20 @@ export class MessageComponent implements OnInit {
   userName: string;
   messageContent: string;
   timeStamp: Date = new Date();
+  isOwnMessage: boolean;
+  ownEmail: string;
 
-  constructor() { }
+  constructor(private authService: AuthService) {
+    authService.authAccount().subscribe(user => {
+      this.ownEmail = user.email;
+      this.isOwnMessage = this.ownEmail === this.userEmail;
+    });
+  }
 
   ngOnInit(chatMessage = this.chatMessage) {
-    this.messageContent = chatMessage.message
+    this.messageContent = chatMessage.message;
     this.timeStamp = chatMessage.timeSent;
     this.userEmail = chatMessage.email;
     this.userName = chatMessage.userName;
   }
-
 }

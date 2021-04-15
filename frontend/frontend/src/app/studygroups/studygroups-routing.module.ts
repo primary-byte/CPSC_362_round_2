@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', component: LayoutComponent },
+    { path: '', component: LayoutComponent },
     { path: 'chatroom', component: ChatroomComponent}
 ];
 

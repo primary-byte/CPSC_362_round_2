@@ -9,6 +9,12 @@ header, footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+header {
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    padding-left: 28%;
+}
 main {
     display: flex;
     flex-direction: column;

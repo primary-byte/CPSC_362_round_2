@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Account } from './../../_models/account';
+import { Component, OnInit, Input } from '@angular/core';
+import { ChatService } from '../services/chat.service';
 
 @Component({
   selector: 'app-user-item',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserItemComponent implements OnInit {
 
+  @Input() account: Account;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

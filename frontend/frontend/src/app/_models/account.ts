@@ -8,6 +8,7 @@ export class Account {
     username?: string;
     email?: string;
     role?: Role;
+    password?: string;
     jwtToken?: string;
     status?: string;
 }

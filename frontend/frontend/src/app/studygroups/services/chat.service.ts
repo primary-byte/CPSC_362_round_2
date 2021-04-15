@@ -1,49 +1,60 @@
+import { ChatMessage } from './../../_models/chat-message.model';
 
 import { Injectable } from '@angular/core';
-import { QueryFn } from '@angular/fire/database';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
-
 import { Observable } from 'rxjs/Observable';
-
-import { ChatMessage } from './../../_models/chat-message.model';
 import { AuthService } from '../services/auth.service';
+import * as firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
 
-  account: any;
+  account: firebase.User;
   chatMessages: AngularFireList<ChatMessage>;
   chatMessage: ChatMessage;
-  userName: Observable<string>;
+  userName: string;
 
   constructor(
     private db: AngularFireDatabase,
     private afAuth: AngularFireAuth
-  ) { 
-    // this.afAuth.authState.subscribe(auth => {
-    //   if(auth !== undefined && auth !== null) {
-    //     this.account = auth;
-    //   }
-    // });
+    ) {
+        this.afAuth.authState.subscribe(auth => {
+          if (auth !== undefined && auth !== null) {
+            this.account = auth;
+          }
+
+          this.getUser().valueChanges().subscribe(a => {
+            this.userName = this.userName;
+          });
+        });
+    }
+
+  getUser() {
+      const userId = this.account.uid;
+      const path = `/users/${userId}`;
+      return this.db.object(path);
+  }
+  
+  getUsers() {
+      const path = '/users';
+      return this.db.list(path);
   }
 
   sendMessage(msg: string) {
     const timestamp = this.getTimeStamp();
-  //  const email = this.account.email;
-    const email = 'test@example.com';
+    const email = this.account.email;
     this.chatMessages = this.getMessages();
     this.chatMessages.push({
       message: msg,
       timeSent: timestamp,
-  //    userName: this.userName,
-      userName: "test-user",
-      email: email
-    });
+      userName: this.userName,
+      email: email });
   }
+
+  
 
   getMessages(): AngularFireList<ChatMessage> {
     return this.db.list('/messages', ref => {
