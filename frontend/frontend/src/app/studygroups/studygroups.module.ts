@@ -1,48 +1,48 @@
-
-import { environment } from './../../environments/environment';
-
-import { FormsModule } from '@angular/forms';
-import { MatCardModule } from '@angular/material/card';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-
 import { StudyGroupsRoutingModule } from './studygroups-routing.module';
 import { LayoutComponent } from './layout.component';
+import { NgModule } from '@angular/core';
+import { LoginComponent } from './login/login.component';
+import { RoomlistComponent } from './roomlist/roomlist.component';
+import { AddroomComponent } from './addroom/addroom.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
-import { ChatFormComponent } from './chat-form/chat-form.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { UserItemComponent } from './user-item/user-item.component';
-import { FeedComponent } from './feed/feed.component';
-import { MessageComponent } from './message/message.component';
-
-import { AuthService } from './services/auth.service';
-import { ChatService } from './services/chat.service';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { DatePipe } from '@angular/common';
+import * as firebase from 'firebase';
 
 @NgModule({
+  declarations: [
+    LayoutComponent,
+    LoginComponent,
+    RoomlistComponent,
+    AddroomComponent,
+    ChatroomComponent
+  ],
   imports: [
     CommonModule,
     StudyGroupsRoutingModule,
-    MatCardModule,
     FormsModule,
-    AngularFireModule,
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    ReactiveFormsModule,
+    MatInputModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatSnackBarModule,
+    MatSidenavModule
   ],
-  declarations: [
-    LayoutComponent,
-    ChatroomComponent,
-    ChatFormComponent,
-    UserListComponent,
-    UserItemComponent,
-    FeedComponent,
-    MessageComponent
-  ],
-  providers: [ChatService, AuthService],
+  providers: [DatePipe],
+  bootstrap: [LayoutComponent]
 })
 export class StudyGroupsModule { }
