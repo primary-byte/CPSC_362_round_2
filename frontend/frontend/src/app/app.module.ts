@@ -18,7 +18,7 @@ import { AccountService } from './_services/account.service';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components/alert.component';
 import { HomeComponent } from './home/home.component';
-//import { ShowPostComponent } from './show-post/show-post.component';
+//import { ShowPostsComponent } from './show-post/show-post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShowPostsComponent } from './show-posts/show-posts.component';
 import { MatTableModule } from '@angular/material/table';
