@@ -10,6 +10,12 @@ main {
     align-items:flex-end;
     width: 60%;
 }
+header {
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    padding-left: 28%;
+}
 mat-card {
     margin: 10px;
 }
@@ -40,4 +46,8 @@ footer {
     color: white;
     margin-top: 25px;
     padding: 6em 2em;
+}
+
+.dynamic {
+    max-width: 90%;
 }

@@ -22,8 +22,6 @@ main {
     align-items: flex-end;
     width: 60%;
     min-width: 500px;
-    max-width: 1000px;
-
 }
 mat-card {
     margin: 10px;
