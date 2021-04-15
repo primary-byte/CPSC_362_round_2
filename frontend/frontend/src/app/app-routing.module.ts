@@ -24,6 +24,7 @@ const routes: Routes = [
     { path: 'studygroups', loadChildren: studygroupsModule, canActivate: [AuthGuard] },
     { path: 'teacherreview', loadChildren: teacherreviewModule, canActivate: [AuthGuard] },
     { path: 'thots', loadChildren: thotsModule, canActivate: [AuthGuard] },
+    //{ path: 'show-post', loadChildren: }
 
 
     // otherwise redirect to home

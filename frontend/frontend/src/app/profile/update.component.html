@@ -62,8 +62,19 @@
                 <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
                 <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
             </div>
+            <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+        
+            <div class="file-upload" requiredFileType="image/png">
+            
+                {{fileName || "No file uploaded yet."}}
+            
+                <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+                    <mat-icon>attach_file</mat-icon>
+                </button>
+            </div>
+            </div>
         </div>
-    </div>
+       
     <div class="form-group">
         <button type="submit" [disabled]="loading" class="btn btn-primary mr-2">
             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
