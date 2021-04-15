@@ -34,3 +34,10 @@ aside {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+footer {
+    background-color: #343a40;
+    color: white;
+    margin-top: 25px;
+    padding: 6em 2em;
+}

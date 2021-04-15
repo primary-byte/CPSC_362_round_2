@@ -1,8 +1,7 @@
+import { files } from './../mock-teachers';
 import { Component } from '@angular/core';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { FlatTreeControl } from '@angular/cdk/tree';
-import { files } from './../mock-courses';
-import { COURSES } from 'src/app/questions/mock-course-list';
 
 /** File node data with possible child nodes. */
 export interface FileNode {
@@ -21,14 +20,13 @@ export interface FlatTreeNode {
 }
 
 @Component({
-  selector: 'app-view-courses',
-  templateUrl: './view-courses.component.html',
-  styleUrls: ['./view-courses.component.css']
+  selector: 'app-view-teacher',
+  templateUrl: './view-teacher.component.html',
+  styleUrls: ['./view-teacher.component.css']
 })
-export class ViewCoursesComponent {
+export class ViewTeacherComponent {
 
-  public searchInput: string;
-  public courses = COURSES;
+
   /** The TreeControl controls the expand/collapse state of tree nodes.  */
   treeControl: FlatTreeControl<FlatTreeNode>;
 

@@ -1,5 +1,3 @@
-<input name="searchInput"  [(ngModel)]="searchInput" type="text" placeholder="Search for classes" size="50" class="dynamic">
-
 <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" >
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding class="description">
     {{node.name}}
@@ -7,7 +5,7 @@
   <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding >
     <button mat-button matTreeNodeToggle
             [attr.aria-label]="'Toggle ' + node.name">
-        {{treeControl.isExpanded() ? 'node' : 'CPSC '}}
+        {{treeControl.isExpanded() ? 'node' : 'Professor '}}
         {{node.name}}
     </button>
   </mat-tree-node>

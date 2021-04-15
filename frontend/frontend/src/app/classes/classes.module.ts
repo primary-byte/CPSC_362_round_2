@@ -10,6 +10,9 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
+import { SearchPipe } from './view-courses/search.pipe';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,11 +21,13 @@ import { MatButtonModule } from '@angular/material/button';
     MatDialogModule,
     MatTreeModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   declarations: [
     LayoutComponent,
-    ViewCoursesComponent
+    ViewCoursesComponent,
+    SearchPipe
   ]
 })
 export class ClassesModule { }

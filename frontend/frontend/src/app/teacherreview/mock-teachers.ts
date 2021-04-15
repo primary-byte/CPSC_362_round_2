@@ -1,67 +1,256 @@
 import { Teacher } from './teacher';
 
-export const TEACHERS: Teacher[] = [
-    { id: 1 , name: 'Alexander Gauf',           classes: 'CPSC 120', email: ''},
-    { id: 2 , name: 'Anand Panangadan',         classes: '', email: ''},
-    { id: 3 , name: 'Anthony Le',               classes: '', email: ''},
-    { id: 4 , name: 'Arash Sharif',             classes: '', email: ''},
-    { id: 5 , name: 'Bach Ho',                  classes: '', email: ''},
-    { id: 6 , name: 'Beth Harnick-Shapiro',     classes: '', email: ''},
-    { id: 7 , name: 'Bijan Hamidi',             classes: '', email: ''},
-    { id: 8 , name: 'Bin Cong',                 classes: '', email: ''},
-    { id: 9 , name: 'Chang-Hyun Jo',            classes: '', email: ''},
-    { id: 10, name: 'Charles Siska',            classes: '', email: ''},
-    { id: 11, name: 'Christopher Ryu',          classes: '', email: ''},
-    { id: 12, name: 'Chun-I Chen',              classes: '', email: ''},
-    { id: 13, name: 'Daniel Rodgers',           classes: '', email: ''},
-    { id: 14, name: 'Dave Garcia-Gomez',        classes: '', email: ''},
-    { id: 15, name: 'David Heckathorn',         classes: '', email: ''},
-    { id: 16, name: 'Doina Bein',               classes: '', email: ''},
-    { id: 17, name: 'Eric May',                 classes: '', email: ''},
-    { id: 18, name: 'Floyd Holliday',           classes: '', email: ''},
-    { id: 19, name: 'Hernan Manabat',           classes: '', email: ''},
-    { id: 20, name: 'James S. Choi',            classes: '', email: ''},
-    { id: 21, name: 'John Oates',               classes: '', email: ''},
-    { id: 22, name: 'Joseph Martinazzi',        classes: '', email: ''},
-    { id: 23, name: 'Kanika Sood',              classes: '', email: ''},
-    { id: 24, name: 'Kenneth Kung',             classes: '', email: ''},
-    { id: 25, name: 'Kenytt Avery',             classes: '', email: ''},
-    { id: 26, name: 'Kevin Wortman',            classes: '', email: ''},
-    { id: 27, name: 'Kyoung-Seop Shin',         classes: '', email: ''},
-    { id: 28, name: 'Lidia Morrison',           classes: '', email: ''},
-    { id: 29, name: 'Linh Trinh',               classes: '', email: ''},
-    { id: 30, name: 'Marc Velasco',             classes: '', email: ''},
-    { id: 31, name: 'Mark Hauchwitz',           classes: '', email: ''},
-    { id: 32, name: 'Mehdi Peiravi',            classes: '', email: ''},
-    { id: 33, name: 'Michael Shafae',           classes: 'CPSC 120', email: ''},
-    { id: 34, name: 'Michael Turi',             classes: '', email: ''},
-    { id: 35, name: 'Mike Peralta',             classes: 'CPSC 120', email: ''},
-    { id: 36, name: 'Mikhail Gofman',           classes: '', email: ''},
-    { id: 37, name: 'Mircea Dumbitrache',       classes: '', email: ''},
-    { id: 38, name: 'Natasha Anderson',         classes: '', email: ''},
-    { id: 39, name: 'Neeraj Gupta',             classes: '', email: ''},
-    { id: 40, name: 'Ning Chen',                classes: '', email: ''},
-    { id: 41, name: 'Paul Salvador Inventado',  classes: '', email: ''},
-    { id: 42, name: 'Pouya Radfar',             classes: '', email: ''},
-    { id: 43, name: 'Sara Ghadami',             classes: 'CPSC 120', email: ''},
-    { id: 44, name: 'Sara Hariri',              classes: '', email: ''},
-    { id: 45, name: 'Shawn Graham',             classes: '', email: ''},
-    { id: 46, name: 'Shawn Wang',               classes: '', email: ''},
-    { id: 47, name: 'Shilpa Lakhanpal',         classes: '', email: ''},
-    { id: 48, name: 'Son Nguyen',               classes: '', email: ''},
-    { id: 49, name: 'Song Choi',                classes: '', email: ''},
-    { id: 50, name: 'Stephen May',              classes: '', email: ''},
-    { id: 51, name: 'Steven Cooper',            classes: '', email: ''},
-    { id: 52, name: 'Susan Barua',              classes: '', email: ''},
-    { id: 53, name: 'Swayam Pati',              classes: '', email: ''},
-    { id: 54, name: 'Sylvan Shulman',           classes: '', email: ''},
-    { id: 55, name: 'Teresa Shea',              classes: '', email: ''},
-    { id: 56, name: 'Thomas Bettens',           classes: '', email: ''},
-    { id: 57, name: 'Tiffany Babb',             classes: '', email: ''},
-    { id: 58, name: 'Tseng-Ching Shen',         classes: '', email: ''},
-    { id: 59, name: 'Wenlin Han',               classes: '', email: ''},
-    { id: 60, name: 'William McCarthy',         classes: '', email: ''},
-    { id: 61, name: 'Yoonsuk Choi',             classes: '', email: ''},
-    { id: 62, name: 'Yu Bai',                   classes: '', email: ''},
-    { id: 63, name: 'Yun Tian',                 classes: '', email: ''},
+export const files = [
+    {name: 'Alexander Gauf',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Anand Panangadan',         
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Anthony Le',               
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Arash Sharif',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Bach Ho',                  
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Beth Harnick-Shapiro',     
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Bijan Hamidi',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Bin Cong',                 
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Chang-Hyun Jo',            
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Charles Siska',            
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Christopher Ryu',          
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Chun-I Chen',              
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Daniel Rodgers',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Dave Garcia-Gomez',        
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'David Heckathorn',         
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Doina Bein',               
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Eric May',                 
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Floyd Holliday',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Hernan Manabat',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'James S. Choi',            
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'John Oates',               
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Joseph Martinazzi',        
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Kanika Sood',              
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Kenneth Kung',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Kenytt Avery',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Kevin Wortman',            
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Kyoung-Seop Shin',         
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Lidia Morrison',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Linh Trinh',               
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Marc Velasco',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Mark Hauchwitz',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Mehdi Peiravi',            
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Michael Shafae',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Michael Turi',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Mike Peralta',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Mikhail Gofman',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Mircea Dumbitrache',       
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Natasha Anderson',         
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Neeraj Gupta',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Ning Chen',                
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Paul Salvador Inventado',  
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Pouya Radfar',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Sara Ghadami',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Sara Hariri',              
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Shawn Graham',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Shawn Wang',               
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Shilpa Lakhanpal',         
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Son Nguyen',               
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Song Choi',                
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Stephen May',              
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Steven Cooper',            
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Susan Barua',              
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Swayam Pati',              
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Sylvan Shulman',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Teresa Shea',              
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Thomas Bettens',           
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Tiffany Babb',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Tseng-Ching Shen',         
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Wenlin Han',               
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'William McCarthy',         
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Yoonsuk Choi',             
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Yu Bai',                   
+        children: [
+            { name: ''},
+            { name: ''}]},
+    {name: 'Yun Tian',                 
+        children: [
+            { name: ''},
+            { name: ''}]},
 ];

@@ -30,7 +30,7 @@ aside {
 }
 .search {
     width: 90%;
-    min-height: 500px;
+    min-height: 600px;
 }
 .topquestions {
     min-height: 500px;
@@ -38,4 +38,14 @@ aside {
 .askquestion {
     height: 50px;
     padding: 1rem;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    margin-top: 25px;
+    padding: 6em 2em;
+}
+.mat-raised-button {
+    line-height: 0;
 }

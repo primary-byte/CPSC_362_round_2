@@ -1,4 +1,4 @@
-header, main, footer{
+header, main{
     margin: 10px;
 }
 p {
@@ -12,4 +12,11 @@ main {
     align-items: left;
     min-height: 700px;
     min-width: 1000px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    margin-top: 25px;
+    padding: 6em 2em;
 }
