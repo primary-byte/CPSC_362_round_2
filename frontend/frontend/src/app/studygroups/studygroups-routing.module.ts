@@ -8,7 +8,7 @@ import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
     { path: '', component: LayoutComponent },
-    { path: 'login', component: LoginComponent },
+    { path: '', component: LoginComponent },
     { path: 'roomlist', component: RoomlistComponent },
     { path: 'addroom', component: AddroomComponent },
     { path: 'chatroom/:roomname', component: ChatroomComponent },

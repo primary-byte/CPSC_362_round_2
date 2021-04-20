@@ -1,10 +1,12 @@
+import { TeacherInfoComponent } from './teacher-info/teacher-info.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
-    { path: '', component: LayoutComponent }
+    { path: '', component: LayoutComponent },
+    { path: 'teacher/:{{teacher}}', component: TeacherInfoComponent}
 ];
 
 @NgModule({

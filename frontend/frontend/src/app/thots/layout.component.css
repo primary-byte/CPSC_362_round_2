@@ -1,3 +1,7 @@
+body {
+    background-image: url('/frontend/frontend/src/app/thots/ants_with_hats.gif');
+}
+
 header, footer {
     display: flex;
     justify-content: center;

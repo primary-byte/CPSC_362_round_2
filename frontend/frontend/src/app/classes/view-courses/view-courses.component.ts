@@ -27,7 +27,6 @@ export interface FlatTreeNode {
 })
 export class ViewCoursesComponent {
 
-  public searchInput: string;
   public courses = COURSES;
   /** The TreeControl controls the expand/collapse state of tree nodes.  */
   treeControl: FlatTreeControl<FlatTreeNode>;

@@ -6,9 +6,10 @@
 </header>
 <div class="wrapper">
 <main>
-    <mat-card class="teachers">
-        <app-view-teacher></app-view-teacher>
-    </mat-card>
+    <input name="searchInput" [(ngModel)]="searchInput" type="text"  placeholder="Search for teachers" size="50" class="search">
+    <div *ngFor="let teacher of teachers | search: searchInput" class="response">
+            <a routerLink="teacher/{{teacher}}" class="list">Professor {{teacher}} </a>
+   </div>
 </main>
 <!-- <aside>
     <mat-card class="sort">

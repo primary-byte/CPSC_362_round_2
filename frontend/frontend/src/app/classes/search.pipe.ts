@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchPipe implements PipeTransform {
     transform(courses: string[], searchInput: string): any[]{     
         if(!searchInput) {
-            return  [];
+            return  courses;
         }
        searchInput = searchInput.toLowerCase();
        return courses.filter(

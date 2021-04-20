@@ -1,14 +1,18 @@
 <header>
-    <h1>Here is a list of Computer Science classes</h1>
+    <h1>Here is a list of Computer Science Classes</h1>
     <h4>This list contains the following information about <br>
         computer science courses that you are able to take <br>
         at California State Fullerton.</h4>
 </header>
 <div class="wrapper">
 <main>
-    <mat-card class="search">
+       <input name="searchInput" [(ngModel)]="searchInput" type="text"  placeholder="Search for classes" size="50" class="search">
+        <div *ngFor="let class of classes | search: searchInput" class="response">
+            <a routerLink="classes/{{class}}" class="list">CPSC {{class}} </a>
+       </div>
+    <!-- 
         <app-view-courses></app-view-courses>
-    </mat-card>
+    </mat-card> -->
 </main>
 <!-- <aside>
     <mat-card class="tags">

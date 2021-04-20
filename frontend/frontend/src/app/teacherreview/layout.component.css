@@ -7,7 +7,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-end;
+    align-items:stretch;
     width: 60%;
 }
 header {
@@ -19,12 +19,25 @@ header {
 mat-card {
     margin: 10px;
 }
-.searchbar {
-    width: 90%;
+.search {
+    max-width: 95%;
+    margin-bottom: 10px;
+    height: 3em;
+    border-radius: 5px;
 }
-.teachers {
-    width: 90%;
-    min-height: 600px;
+.response {
+    width: 100%;
+    display: flex;
+    background-color: lightblue;
+    margin: 4px 0px;
+    border-radius: 10px;
+}
+.list {
+    padding: 10px;
+    color: black;
+    width: 100%;
+    min-height: 10px;
+    font-size: 18px;
 }
 aside {
     display: flex;

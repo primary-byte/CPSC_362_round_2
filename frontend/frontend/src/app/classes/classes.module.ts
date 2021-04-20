@@ -5,13 +5,13 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { ClassesRoutingModule } from './classes-routing.module';
 import { LayoutComponent } from './layout.component';
-import { ViewCoursesComponent } from './view-courses/view-courses.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
-import { SearchPipe } from './view-courses/search.pipe';
+import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
+import { ClassInfoComponent } from './class-info/class-info.component';
 
 @NgModule({
   imports: [
@@ -26,8 +26,8 @@ import { FormsModule } from '@angular/forms';
   ],
   declarations: [
     LayoutComponent,
-    ViewCoursesComponent,
-    SearchPipe
+    SearchPipe,
+    ClassInfoComponent
   ]
 })
 export class ClassesModule { }

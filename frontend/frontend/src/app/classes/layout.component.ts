@@ -1,3 +1,5 @@
+import { classes } from './sort-courses';
+
 import {Component} from '@angular/core';
 
 @Component({
@@ -6,4 +8,6 @@ import {Component} from '@angular/core';
 })
 
 export class LayoutComponent { 
+    public searchInput: string;
+    public classes = classes;
 }

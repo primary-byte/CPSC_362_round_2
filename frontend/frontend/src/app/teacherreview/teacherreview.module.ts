@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
 import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,6 +11,7 @@ import { ViewTeacherComponent } from './view-teacher/view-teacher.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { TeacherInfoComponent } from './teacher-info/teacher-info.component';
 
 @NgModule({
   imports: [
@@ -17,12 +20,15 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatTreeModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   declarations: [
     LayoutComponent,
     TeacherDetailComponent,
-    ViewTeacherComponent
+    ViewTeacherComponent,
+    SearchPipe,
+    TeacherInfoComponent
   ]
 })
 export class TeacherReviewModule { }
