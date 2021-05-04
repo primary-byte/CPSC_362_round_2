@@ -27,3 +27,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-menu-item:focus {
     outline: 0px solid transparent;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    
+}

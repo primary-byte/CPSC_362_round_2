@@ -58,6 +58,8 @@ footer {
     color: white;
     margin-top: 25px;
     padding: 6em 2em;
+    position: sticky;
+    top: 100%;
 }
 a:hover { 
     text-decoration: none;
