@@ -5,26 +5,28 @@
         at California State Fullerton.</h4>
 </header>
 <div class="wrapper">
-<main>
-       <input name="searchInput" [(ngModel)]="searchInput" type="text"  placeholder="Search for classes" size="50" class="search">
-        <div *ngFor="let class of classes | search: searchInput" class="response">
-            <a routerLink="classes/{{class}}" class="list">CPSC {{class}} </a>
-       </div>
-    <!-- 
-        <app-view-courses></app-view-courses>
-    </mat-card> -->
-</main>
-<!-- <aside>
+    <main>
+        <input name="searchInput" [(ngModel)]="searchInput" type="text" placeholder="Search for classes" size="50"
+            class="search">
+        <div *ngFor="let class of classes | searchFilter: searchInput" class="response">
+            <a routerLink="classes/{{class.id}}" class="list">CPSC {{class.id}} - {{class.name}}</a>
+        </div>
+    </main>
+    <aside>
     <mat-card class="tags">
-        <p>Tags go in here</p>
+        <mat-chip-list selectable multiple>
+            <mat-chip #c="matChip"  *ngFor="let option of options" [value]="option" (click)="toggleSelection(c)">
+                {{option}}
+            </mat-chip>
+        </mat-chip-list>
     </mat-card>
-</aside> -->
+    </aside>
 </div>
 <footer>
     <br>
     <br>
-    <div class="logo">
-    <h1>TheDocs</h1>
-    <h3></h3>
+    <div>
+        <h1>TheDocs</h1>
+        <h3></h3>
     </div>
 </footer>

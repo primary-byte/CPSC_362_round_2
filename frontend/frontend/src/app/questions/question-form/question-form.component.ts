@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { QUESTIONS } from '../mock-questions';
-import { Question } from '../question';
+import { Question } from '../../_models/question';
 import { COURSES } from './../mock-course-list';
-import { Course } from './../../classes/course';
+import { Course } from '../../_models/course';
 
 @Component({
   selector: 'app-question-form',

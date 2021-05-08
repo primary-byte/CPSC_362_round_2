@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 import { ThotsRoutingModule } from './thots-routing.module';
 import { LayoutComponent } from './layout.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { LayoutComponent } from './layout.component';
   ],
   declarations: [
     LayoutComponent,
+    BlogComponent,
   ]
 })
 export class ThotsModule { }

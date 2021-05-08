@@ -3,12 +3,12 @@ import { Pipe, PipeTransform } from '@angular/core';
     name:'search'
 })
 export class SearchPipe implements PipeTransform {
-    transform(courses: string[], searchInput: string): any[]{     
+    transform(items: string[], searchInput: string): any[]{     
         if(!searchInput) {
-            return  courses;
+            return items;
         }
        searchInput = searchInput.toLowerCase();
-       return courses.filter(
+       return items.filter(
            x =>x.toLowerCase().includes(searchInput)
        )
      }

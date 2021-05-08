@@ -12,7 +12,7 @@
     <select class="form-control"  id="course"
             required
             [(ngModel)]="model.course" name="course">
-      <option *ngFor="let num of courses" [value]="num">CPSC {{num}}</option>
+      <option *ngFor="let num of courses" [value]="num">CPSC {{num.course}}</option>
     </select>
 </div>
 

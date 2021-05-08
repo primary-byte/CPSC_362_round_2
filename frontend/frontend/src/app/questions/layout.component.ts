@@ -1,3 +1,4 @@
+import { COURSES } from './mock-course-list';
 import { QUESTIONS } from './mock-questions';
 import {Component} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
@@ -10,18 +11,18 @@ import { ModalComponent } from './modal/modal.component';
 
 export class LayoutComponent { 
 
-    animal: string;
-    name: string;
+    question: string;
+    course: string;
     constructor(public dialog: MatDialog) {}
 
     openDialog(): void {
         const dialogRef = this.dialog.open(ModalComponent, {
             width: '500px',
-            data: {name: this.name, animal: this.animal}
+            data: {question: this.question, course: this.course}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-        this.animal = result;
+        this.course = result;
     });
     }
 }

@@ -6,7 +6,7 @@ import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
     { path: '', component: LayoutComponent },
-    { path: 'teacher/:{{teacher}}', component: TeacherInfoComponent}
+    { path: 'teacher/:id', component: TeacherInfoComponent }
 ];
 
 @NgModule({

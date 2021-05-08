@@ -1,4 +1,4 @@
-import { Course } from './../classes/course';
+import { Course } from '../_models/course';
 
 export const COURSES:Course[] = [
     { id: '120 ', name: 'Introduction to Programming'},

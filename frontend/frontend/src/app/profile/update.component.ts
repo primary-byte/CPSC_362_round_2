@@ -9,7 +9,9 @@ import { MustMatch } from './../_helpers/must-match.validator';
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 
-@Component({ templateUrl: 'update.component.html' })
+@Component({ 
+    selector: 'update',
+    templateUrl: 'update.component.html' })
 export class UpdateComponent implements OnInit {
     account = this.accountService.accountValue;
     form: FormGroup;

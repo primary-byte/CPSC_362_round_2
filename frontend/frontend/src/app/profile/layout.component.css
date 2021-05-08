@@ -20,10 +20,22 @@
     width: 100px;
     border-radius: 50%;
 }
+main {
+    width: 70%;
+    margin: 10px;
+}
+aside {
+    margin: 10px;
+    width: 30%;
+
+}
 footer {
-    display: block;
-    min-height: 100px;
-    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    margin-top: 25px;
+    padding: 6em 2em;
+    position: sticky;
+    top: 100%;
 }
 
 file-input {

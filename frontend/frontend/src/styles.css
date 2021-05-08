@@ -17,8 +17,6 @@ a { cursor: pointer; }
 html, body, app, .app-container {
     min-height: 100%;
     max-height: auto;
-    background-image: url("\pexels-nathan-cowley-1151282.jpg");
-    background-size: cover;
 }
 
 html, body { height: 100%; }
@@ -31,5 +29,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
     display: flex;
     flex-direction: column;
-    
 }

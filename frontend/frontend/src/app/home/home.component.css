@@ -7,11 +7,9 @@ p {
 
 main {
     margin-top: 2in;
-    display: flow-root;
-    margin-left: 400px;
-    align-items: left;
+    justify-items: center;
+    align-items: center;
     min-height: 700px;
-    min-width: 1000px;
 }
 
 footer {

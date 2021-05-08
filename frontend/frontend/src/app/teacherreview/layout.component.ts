@@ -1,4 +1,4 @@
-import { teachers } from './sort-teachers';
+import { Teachers } from './sort-teachers';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class LayoutComponent { 
     public searchInput: string;
-    public teachers = teachers;
+    public teachers = Teachers;
 }

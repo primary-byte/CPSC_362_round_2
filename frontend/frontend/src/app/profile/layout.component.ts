@@ -1,5 +1,5 @@
 import { HttpClient, HttpEventType } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import {  ShowPostsComponent } from './../show-posts/show-posts.component';
@@ -10,5 +10,4 @@ import {  ShowPostsComponent } from './../show-posts/show-posts.component';
 })
 export class LayoutComponent { 
 
-  
 }
