@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 60%;
+
+}
+mat-card, button {
+    margin: 10px;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+}
+.searchbar {
+    width: 90%;
+}
+.search {
+    width: 90%;
+    min-height: 600px;
+}
+.topquestions {
+    min-height: 500px;
+}
+.askquestion {
+    height: 50px;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    margin-top: 25px;
+    padding: 6em 2em;
+}
+.mat-raised-button {
+    line-height: 0;
+}

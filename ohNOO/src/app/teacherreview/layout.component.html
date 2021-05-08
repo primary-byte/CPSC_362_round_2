@@ -1,0 +1,27 @@
+<header>
+    <h1>Here is a list of Computer Science Teachers</h1>
+    <h4>This list contains the following information about <br>
+        computer science teachers that currently teach at  <br>
+        California State University Fullerton.</h4>
+</header>
+<div class="wrapper">
+<main>
+    <input name="searchInput" [(ngModel)]="searchInput" type="text"  placeholder="Search for teachers" size="50" class="search">
+    <div *ngFor="let teacher of teachers | searchFilter: searchInput" class="response">
+            <a routerLink="teacher/{{teacher.id}}" class="list">Professor {{teacher.id}} </a>
+   </div>
+</main>
+<!-- <aside>
+    <mat-card class="sort">
+        <p>sort by tags</p>
+    </mat-card>
+</aside> -->
+</div>
+<footer>
+    <br>
+    <br>
+    <div class="logo">
+    <h1>TheDocs</h1>
+    <h3></h3>
+    </div>
+</footer>

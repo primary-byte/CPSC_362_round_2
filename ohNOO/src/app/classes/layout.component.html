@@ -1,0 +1,32 @@
+<header>
+    <h1>Here is a list of Computer Science Classes</h1>
+    <h4>This list contains the following information about <br>
+        computer science courses that you are able to take <br>
+        at California State Fullerton.</h4>
+</header>
+<div class="wrapper">
+    <main>
+        <input name="searchInput" [(ngModel)]="searchInput" type="text" placeholder="Search for classes" size="50"
+            class="search">
+        <div *ngFor="let class of classes | searchFilter: searchInput" class="response">
+            <a routerLink="classes/{{class.id}}" class="list">CPSC {{class.id}} - {{class.name}}</a>
+        </div>
+    </main>
+    <aside>
+    <mat-card class="tags">
+        <mat-chip-list selectable multiple>
+            <mat-chip #c="matChip"  *ngFor="let option of options" [value]="option" (click)="toggleSelection(c)">
+                {{option}}
+            </mat-chip>
+        </mat-chip-list>
+    </mat-card>
+    </aside>
+</div>
+<footer>
+    <br>
+    <br>
+    <div>
+        <h1>TheDocs</h1>
+        <h3></h3>
+    </div>
+</footer>

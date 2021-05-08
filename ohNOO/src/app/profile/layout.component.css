@@ -1,0 +1,43 @@
+.flex {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 500px;
+    padding: 10px;
+}
+.schedule {
+    width: 70%;
+    margin: 10px 10px;
+    flex-grow: 3;
+}
+.profile {
+    width: 30%;
+    margin: 10px 10px;
+    flex-grow: 1;
+}
+.circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+main {
+    width: 70%;
+    margin: 10px;
+}
+aside {
+    margin: 10px;
+    width: 30%;
+
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    margin-top: 25px;
+    padding: 6em 2em;
+    position: sticky;
+    top: 100%;
+}
+
+file-input {
+    display: flex;
+}

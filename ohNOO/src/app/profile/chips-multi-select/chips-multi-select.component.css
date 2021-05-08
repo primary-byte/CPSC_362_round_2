@@ -1,0 +1,16 @@
+mat-icon {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+mat-card {
+    margin-bottom: 10px;
+}
+
+ mat-expansion-panel-header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
